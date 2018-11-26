@@ -49,7 +49,7 @@ class AuthController extends Controller
             if (Hash::check($request->password, $user->password)) {
                 $token = $user->createToken('Laravel Password Grant Client')->accessToken;
                 $response = ['token' => $token];
-                return $response($response, JsonResponse::HTTP_OK);
+                return response($response, JsonResponse::HTTP_OK);
             } else {
                 $response = 'Incorect password';
                 return response($response, JsonResponse::HTTP_UNPROCESSABLE_ENTITY);
@@ -60,15 +60,13 @@ class AuthController extends Controller
         }
     }
 
-    public function logout(Request $request):JsonResponse
-    {
-        /**
-         * @var Token $token
-         */
+    public function logout (Request $request) {
+
         $token = $request->user()->token();
         $token->revoke();
 
-        $response = 'Loged Out!';
-        return $response($response, JsonResponse::HTTP_OK);
+        $response = 'You have been succesfully logged out!';
+        return response($response, JsonResponse::HTTP_OK);
+
     }
 }
