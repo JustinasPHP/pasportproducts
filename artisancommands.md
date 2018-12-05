@@ -25,5 +25,11 @@ failo, tada instaliuoja iš **package.json** failo.
 - `php artisan make:controller PersonController --recource --model=Person`
   - sukuria CRUD controller ir pritaiko modeliui Person
   - `php artisan make:controller API/Controller --api`
+  - `php artisan make:model Role -m
+
+````
+start cmd.exe /k "echo laravel cron started & php artisan schedule:run > NUL 2>&1"
+start chrome
+`````
 
 

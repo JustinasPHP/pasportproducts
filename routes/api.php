@@ -33,6 +33,7 @@ use Illuminate\Http\Request;
             Route::get('product/{productId}', 'API\ProductController@show')->name('api.product.show');
             Route::post('product/create', 'API\ProductController@store')->name('api.product.create');
             Route::post('product/{productId}/update', 'API\ProductController@update')->name('api.product.update');
+            Route::delete('product/{productId}', 'API\ProductController@destroy')->name('api.product.delete');
 
         });
 

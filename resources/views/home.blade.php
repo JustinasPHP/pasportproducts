@@ -15,7 +15,7 @@
                     @endif
 
                     You are logged in!
-                </div>apapp
+                </div>
             </div>
         </div>
     </div>
